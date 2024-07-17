@@ -14,12 +14,12 @@ const appReducer = (state = initialState, action: ActionsType): InitialStateType
 			return {
 				...state,
 				eur: action.eur,
-				usd: action.eur / 1.07
+				usd: action.eur * 1.07
 			}
 		case 'CV/APP/CONVERT_TO_EUR':
 			return {
 				...state,
-				eur: action.usd * 1.07,
+				eur: action.usd / 1.07,
 				usd: action.usd
 			}
 		default:
